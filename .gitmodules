@@ -1,0 +1,3 @@
+[submodule "sqlite"]
+	path = src
+	url = https://github.com/ivansoft/sqlite-amalgamation-src
