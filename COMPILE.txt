@@ -4,7 +4,7 @@ https://www.sqlite.org/compile.html#recommended_compile_time_options
                              mutex and thread-safety logic in SQLite to be omitted
 
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
 nmake /f Makefile.msc dll ^
             FOR_WIN10=1 ^
@@ -80,7 +80,7 @@ link.exe sqlite3.lo sqlite3res.lo /OUT:winsqlite3.dll
             /DLL
             /guard:cf
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
 nmake /f Makefile.msc dll ^
             FOR_WIN10=1 ^
@@ -112,7 +112,7 @@ nmake /f Makefile.msc dll ^
             -DSQLITE_SYSTEM_MALLOC=1
             -DSQLITE_OMIT_LOCALTIME=1
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
 nmake /f Makefile.msc dll ^
             FOR_WIN10=1 ^
@@ -135,7 +135,7 @@ Minimal
         -DSQLITE_THREADSAFE=1 
         -DSQLITE_THREAD_OVERRIDE_LOCK=-1
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
 > cl -nologo -W4 -I. -I. -fp:precise /d2guard4 -MD -O2 -Zi -Fosqlite3.lo -Fdsqlite3.pdb -c sqlite3.c
     -DSQLITE_API=__declspec(dllexport) -c sqlite3.c
