@@ -114,3 +114,68 @@ nmake /f Makefile.msc dll ^
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+nmake /f Makefile.msc dll ^
+            FOR_WIN10=1 ^
+            USE_FULLWARN=1 ^
+            DEBUG=0 ^
+            OPTIMIZATIONS=2 ^
+(+)         OPT_FEATURE_FLAGS= ^
+(+)         EXT_FEATURE_FLAGS= ^
+(+)         REQ_FEATURE_FLAGS= ^
+            USE_CRT_DLL=1 ^
+            USE_NATIVE_LIBPATHS=1
+
+Minimal
+
+        -D_ARM_WINAPI_PARTITION_DESKTOP_SDK_AVAILABLE -MD -DNDEBUG 
+        -D_CRT_SECURE_NO_DEPRECATE 
+        -D_CRT_SECURE_NO_WARNINGS 
+        -D_CRT_NONSTDC_NO_DEPRECATE 
+        -D_CRT_NONSTDC_NO_WARNINGS 
+        -DSQLITE_THREADSAFE=1 
+        -DSQLITE_THREAD_OVERRIDE_LOCK=-1
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+> cl -nologo -W4 -I. -I. -fp:precise /d2guard4 -MD -O2 -Zi -Fosqlite3.lo -Fdsqlite3.pdb -c sqlite3.c
+    -DSQLITE_API=__declspec(dllexport) -c sqlite3.c
+    -DNDEBUG
+        -D_CRT_SECURE_NO_DEPRECATE
+        -D_CRT_SECURE_NO_WARNINGS
+        -D_CRT_NONSTDC_NO_DEPRECATE
+        -D_CRT_NONSTDC_NO_WARNINGS
+        -D_ARM_WINAPI_PARTITION_DESKTOP_SDK_AVAILABLE
+        -DINCLUDE_MSVC_H=1
+             -DSQLITE_OS_WIN=1
+(std)        -DSQLITE_THREADSAFE=1
+(std)        -DSQLITE_THREAD_OVERRIDE_LOCK=-1
+(std)        -DSQLITE_MAX_TRIGGER_DEPTH=100
+(std)        -DSQLITE_ENABLE_MATH_FUNCTIONS
+(std)        -DSQLITE_SYSTEM_MALLOC=1
+(std)        -DSQLITE_OMIT_LOCALTIME=1
+(rec)        -DSQLITE_DQS=0
+(rec)        -DSQLITE_DEFAULT_MEMSTATUS=0
+(rec)        -DSQLITE_DEFAULT_WAL_SYNCHRONOUS=1
+(rec)        -DSQLITE_LIKE_DOESNT_MATCH_BLOBS
+(rec)        -DSQLITE_MAX_EXPR_DEPTH=0
+(rec)        -DSQLITE_OMIT_DEPRECATED
+(rec)        -DSQLITE_OMIT_PROGRESS_CALLBACK
+(rec)        -DSQLITE_OMIT_SHARED_CACHE
+(rec)        -DSQLITE_USE_ALLOCA
+(rec)        -DSQLITE_STRICT_SUBTYPE=1
+ (my)        -DSQLITE_DEFAULT_FOREIGN_KEYS=1
+ (my)        -DSQLITE_OMIT_GET_TABLE
+ (my)        -DSQLITE_OMIT_UTF16
+ (my)        -DSQLITE_OMIT_LOAD_EXTENSION
+ (my)        -DSQLITE_ENABLE_NULL_TRIM
+ (my)        -DSQLITE_OMIT_EXPLAIN
+ (my)        -DSQLITE_TEMP_STORE=3
+ (my)        -DSQLITE_OMIT_COMPLETE
+ (my)        -DSQLITE_OMIT_AUTHORIZATION
+ (my)        -DSQLITE_OMIT_TRACE
+ (my)        -DSQLITE_OMIT_BUILTIN_TEST
+ (my)        -DSQLITE_UNTESTABLE
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
