@@ -1,0 +1,44 @@
+Microsoft (R) COFF/PE Dumper Version 14.43.34808.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file winsqlite3.dll
+
+File Type: DLL
+
+  Image has the following dependencies:
+
+    api-ms-win-core-file-l1-1-0.dll
+    api-ms-win-core-sysinfo-l1-1-0.dll
+    api-ms-win-core-profile-l1-1-0.dll
+    api-ms-win-core-memory-l1-1-0.dll
+    api-ms-win-core-localization-l1-2-0.dll
+    api-ms-win-core-string-l1-1-0.dll
+    api-ms-win-core-timezone-l1-1-0.dll
+    api-ms-win-core-heap-l1-1-0.dll
+    api-ms-win-core-processthreads-l1-1-0.dll
+    api-ms-win-core-heap-l2-1-0.dll
+    api-ms-win-core-handle-l1-1-0.dll
+    api-ms-win-core-synch-l1-1-0.dll
+    api-ms-win-core-debug-l1-1-0.dll
+    api-ms-win-core-errorhandling-l1-1-0.dll
+    api-ms-win-core-file-l1-2-2.dll
+    api-ms-win-core-synch-l1-2-0.dll
+    api-ms-win-core-file-l1-2-0.dll
+    api-ms-win-crt-math-l1-1-0.dll
+    api-ms-win-crt-heap-l1-1-0.dll
+    api-ms-win-crt-string-l1-1-0.dll
+    VCRUNTIME140.dll
+    api-ms-win-core-rtlsupport-l1-1-0.dll
+    api-ms-win-core-processthreads-l1-1-1.dll
+    api-ms-win-core-libraryloader-l1-2-0.dll
+    api-ms-win-core-interlocked-l1-1-0.dll
+    api-ms-win-crt-runtime-l1-1-0.dll
+
+  Summary
+
+        5000 .data
+        9000 .pdata
+       1D000 .rdata
+        1000 .reloc
+       D6000 .text
