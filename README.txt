@@ -42,6 +42,8 @@ SQLite itself does not contain any TCL code, but it does use TCL to help with th
     nmake /f Makefile.msc OPTIONS=-DSQLITE_OMIT_DEPRECATED sqlite3.exe
 
 
+canonical
+
 https://github.com/sqlite/sqlite/blob/master/doc/compile-for-windows.md
 
   (Optional)
@@ -78,4 +80,33 @@ https://github.com/sqlite/sqlite/blob/master/doc/compile-for-windows.md
     nmake /f Makefile.msc STATICALLY_LINK_TCL=1 sqlite3_analyzer.exe
 
     dumpbin /dependents sqlite3_analyzer.exe
+
+
+https://www.sqlite.org/compile.html#_options_to_omit_features
+
+Telling your compiler to optimize for size usually has a much larger impact on library footprint than employing any of these compile-time options.
+
+You should also verify that debugging options are disabled.
+
+Some options must also be defined when using the Lemon parser generator tool to generate the parse.c file.
+Because of this, such options may only be used when the library is built from canonical source, not from the amalgamation.
+
+In general, always compile from canonical sources in order to take advantage of SQLITE_OMIT_* options.
+
+The SQLITE_OMIT_* options are unsupported. By this we mean that an SQLITE_OMIT_* option that omits code from the build in the current release might become a no-op in the next release. Also, not all SQLITE_OMIT_* options are tested. Some SQLITE_OMIT_* options might cause SQLite to malfunction and/or provide incorrect answers.
+
+   >>> Important Note: The SQLITE_OMIT_* compile-time options are mostly unsupported.
+
+
+reference
+
+https://learn.microsoft.com/en-us/cpp/build/reference/compiler-options-listed-by-category
+https://learn.microsoft.com/en-us/cpp/build/reference/compiler-options-listed-alphabetically
+
+https://learn.microsoft.com/en-us/cpp/build/reference/link-pass-options-to-linker
+https://learn.microsoft.com/en-us/cpp/build/reference/linker-options
+
+https://learn.microsoft.com/en-us/cpp/build/reference/c-cpp-build-tools
+
+https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options
 
