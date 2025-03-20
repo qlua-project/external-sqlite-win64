@@ -1,0 +1,77 @@
+TCL
+
+SQLite needs
+  "tclsh90.exe" command-line tool as part of the build process
+  "tcl90.lib" and "tclstub.lib" libraries in order to run tests
+
+Assumes you are working with TCL version 9.0
+
+TCL scripts used to build and/or transform source code files. For example, the tool/mksqlite3h.tcl script reads the src/sqlite.h.in file and uses it as a template to construct the deliverable "sqlite3.h" file that defines the SQLite interface.
+
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+https://www.tcl-lang.org/
+https://www.magicsplat.com/tcl-installer/index.html
+https://sourceforge.net/projects/magicsplat/files/magicsplat-tcl/
+   tcl-9.0.1-installer-2.0.3-x64.msi/
+   tcl-8.6.16-installer-1.16.0-x64.msi/
+
+C:\Users\<user.name>\AppData\Local\Apps\Tcl90\
+
+
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+https://zlib.net/
+https://zlib.net/zlib131.zip
+
+unzip
+   -> sqlite\compat\zlib
+
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+https://sqlite.org/src/dir/ext/icu
+
+https://icu.unicode.org/
+
+https://unicode-org.github.io/icu-docs/apidoc/released/icu4c/
+
+https://github.com/unicode-org/icu
+https://github.com/unicode-org/icu/releases
+
+https://github.com/unicode-org/icu/releases/download/release-77-1/icu4c-77_1-Win64-MSVC2022.zip
+
+unzip
+   -> sqlite\compat\icu
+rename
+   bin64 -> bin
+   lib64 -> lib
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+https://stackoverflow.com/questions/63930386/statically-linking-icu-on-windows
+  Recent versions of Windows have ICU built-in, so there's no need to carry a DLL or statically link it. 
+
+https://learn.microsoft.com/en-us/windows/win32/intl/international-components-for-unicode--icu-#getting-started
+
+  #include <icu.h>
+
+  /link icu.lib
+
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+
+https://sqlite.org/forum/info/31b35deda909d45f
+
+   nmake /f ..\Makefile.msc TOP=..\ USE_ICU=1
+
+The USE_ICU is necessary because it not only generates the -DSQLITE_ENABLE_ICU but also the necessary /I and /LIBPATH: that will correctly include the ICU files.
+
+- - - - -
+
+https://www.irontcl.com/index.html
+  Tcl/Tk 8.6.7 (x64)
+
+
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+
