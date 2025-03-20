@@ -1,0 +1,535 @@
+> "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Auxiliary\Build\vcvars64.bat"
+
+> mkdir build
+> cd build
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+\build>nmake /f ..\src\Makefile.msc TOP=..\src USE_ICU=1 USE_ZLIB=1 USE_TCLSH_IN_PATH=1 FOR_WIN10=1 shell.c
+
+Microsoft (R) Program Maintenance Utility Version 14.43.34808.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+        cl -DHAVE__FULLPATH=1 ..\src\autosetup\jimsh0.c
+Microsoft (R) C/C++ Optimizing Compiler Version 19.43.34808 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+jimsh0.c
+Microsoft (R) Incremental Linker Version 14.43.34808.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/out:jimsh0.exe
+jimsh0.obj
+        jimsh0.exe ..\src\tool\mkshellc.tcl shell.c
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+\build>nmake /f ..\src\Makefile.msc TOP=..\src USE_ICU=1 USE_ZLIB=1 USE_TCLSH_IN_PATH=1 FOR_WIN10=1 zlib
+
+Microsoft (R) Program Maintenance Utility Version 14.43.34808.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+        pushd ..\src\compat\zlib && nmake.exe /f win32\Makefile.msc clean zlib.lib && popd
+
+Microsoft (R) Program Maintenance Utility Version 14.43.34808.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+        del zlib.lib
+Could Not Find ..\src\compat\zlib\zlib.lib
+        del zlib1.dll
+Could Not Find ..\src\compat\zlib\zlib1.dll
+        del zdll.lib
+Could Not Find ..\src\compat\zlib\zdll.lib
+        del *.obj
+Could Not Find ..\src\compat\zlib\*.obj
+        del *.res
+Could Not Find ..\src\compat\zlib\*.res
+        del *.exp
+Could Not Find ..\src\compat\zlib\*.exp
+        del *.exe
+Could Not Find ..\src\compat\zlib\*.exe
+        del *.pdb
+Could Not Find ..\src\compat\zlib\*.pdb
+        del *.manifest
+Could Not Find ..\src\compat\zlib\*.manifest
+        del foo.gz
+Could Not Find ..\src\compat\zlib\foo.gz
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\adler32.c
+adler32.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\compress.c
+compress.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\crc32.c
+crc32.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\deflate.c
+deflate.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\gzclose.c
+gzclose.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\gzlib.c
+gzlib.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\gzread.c
+gzread.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\gzwrite.c
+gzwrite.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\infback.c
+infback.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\inflate.c
+inflate.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\inftrees.c
+inftrees.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\inffast.c
+inffast.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\trees.c
+trees.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\uncompr.c
+uncompr.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\zutil.c
+zutil.c
+        lib -nologo -out:zlib.lib adler32.obj compress.obj crc32.obj deflate.obj gzclose.obj gzlib.obj gzread.obj  gzwrite.obj infback.obj inflate.obj inftrees.obj inffast.obj trees.obj uncompr.obj zutil.obj
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+\build>nmake /f ..\src\Makefile.msc TOP=..\src USE_ICU=1 USE_ZLIB=1 USE_TCLSH_IN_PATH=1 FOR_WIN10=1 icu.lo
+
+Microsoft (R) Program Maintenance Utility Version 14.43.34808.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+        cl -nologo -W4 -Fdmkkeywordhash.pdb   /d2guard4 -D_ARM_WINAPI_PARTITION_DESKTOP_SDK_AVAILABLE -MT -DNDEBUG -D_CRT_SECURE_NO_DEPRECATE -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_DEPRECATE -D_CRT_NONSTDC_NO_WARNINGS -O2 -Zi -wd4054 -wd4055 -wd4100 -wd4127 -wd4130 -wd4152 -wd4189 -wd4206 -wd4210 -wd4232 -wd4244 -wd4305 -wd4306 -wd4702 -wd4706 -Femkkeywordhash.exe  -DSQLITE_MAX_TRIGGER_DEPTH=100  -DSQLITE_ENABLE_FTS3=1 -DSQLITE_ENABLE_FTS5=1 -DSQLITE_ENABLE_RTREE=1 -DSQLITE_ENABLE_GEOPOLY=1 -DSQLITE_ENABLE_STMTVTAB=1 -DSQLITE_ENABLE_DBPAGE_VTAB=1 -DSQLITE_ENABLE_DBSTAT_VTAB=1 -DSQLITE_ENABLE_BYTECODE_VTAB=1 -DSQLITE_ENABLE_COLUMN_METADATA=1 -DSQLITE_ENABLE_MATH_FUNCTIONS  -DSQLITE_ENABLE_FTS4=1 -DSQLITE_SYSTEM_MALLOC=1 -DSQLITE_OMIT_LOCALTIME=1   ..\src\tool\mkkeywordhash.c /link /DEBUG
+mkkeywordhash.c
+        .\mkkeywordhash.exe > keywordhash.h
+        copy /Y ..\src\tool\lempar.c .
+        1 file(s) copied.
+        copy /B lempar.c +,,
+        1 file(s) copied.
+        cl -nologo -W4 -Fdlemon.pdb   /d2guard4 -D_ARM_WINAPI_PARTITION_DESKTOP_SDK_AVAILABLE -MT -DNDEBUG -D_CRT_SECURE_NO_DEPRECATE -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_DEPRECATE -D_CRT_NONSTDC_NO_WARNINGS -O2 -Zi -wd4054 -wd4055 -wd4100 -wd4127 -wd4130 -wd4152 -wd4189 -wd4206 -wd4210 -wd4232 -wd4244 -wd4305 -wd4306 -wd4702 -wd4706 -Daccess=_access  -Felemon.exe ..\src\tool\lemon.c /link /DEBUG
+lemon.c
+        del /Q parse.y parse.h parse.h.temp 2>NUL
+        copy /Y ..\src\src\parse.y .
+        1 file(s) copied.
+        copy /B parse.y +,,
+        1 file(s) copied.
+        .\lemon.exe  -DSQLITE_MAX_TRIGGER_DEPTH=100  -DSQLITE_ENABLE_FTS3=1 -DSQLITE_ENABLE_FTS5=1 -DSQLITE_ENABLE_RTREE=1 -DSQLITE_ENABLE_GEOPOLY=1 -DSQLITE_ENABLE_STMTVTAB=1 -DSQLITE_ENABLE_DBPAGE_VTAB=1 -DSQLITE_ENABLE_DBSTAT_VTAB=1 -DSQLITE_ENABLE_BYTECODE_VTAB=1 -DSQLITE_ENABLE_COLUMN_METADATA=1 -DSQLITE_ENABLE_MATH_FUNCTIONS  -DSQLITE_ENABLE_FTS4=1 -DSQLITE_SYSTEM_MALLOC=1 -DSQLITE_OMIT_LOCALTIME=1  -S parse.y
+        type parse.h ..\src\src\vdbe.c | jimsh0.exe ..\src\tool\mkopcodeh.tcl > opcodes.h
+parse.h
+
+..\src\src\vdbe.c
+        cl -nologo -W4 -Fdmksourceid.pdb   /d2guard4 -D_ARM_WINAPI_PARTITION_DESKTOP_SDK_AVAILABLE -MT -DNDEBUG -D_CRT_SECURE_NO_DEPRECATE -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_DEPRECATE -D_CRT_NONSTDC_NO_WARNINGS -O2 -Zi -wd4054 -wd4055 -wd4100 -wd4127 -wd4130 -wd4152 -wd4189 -wd4206 -wd4210 -wd4232 -wd4244 -wd4305 -wd4306 -wd4702 -wd4706 -Femksourceid.exe ..\src\tool\mksourceid.c /link /DEBUG
+mksourceid.c
+        jimsh0.exe ..\src\tool\mksqlite3h.tcl "../src" -o sqlite3.h --useapicall
+        jimsh0.exe ..\src\tool\mkopcodec.tcl opcodes.h > opcodes.c
+        type "C:\Tcl\include\tcl.h" | tclsh ..\src\tool\replace.tcl exact tclDecls.h sqlite_tclDecls.h  | tclsh ..\src\tool\replace.tcl regsub "typedef (.*?)\(Tcl_" "typedef \1 (SQLITE_TCLAPI Tcl_"  | tclsh ..\src\tool\replace.tcl exact "void (*freeProc)" "void (SQLITE_TCLAPI *freeProc)"  | tclsh ..\src\tool\replace.tcl exact "Tcl_HashEntry *(*findProc)" "Tcl_HashEntry *(SQLITE_TCLAPI *findProc)"  | tclsh ..\src\tool\replace.tcl exact "Tcl_HashEntry *(*createProc)" "Tcl_HashEntry *(SQLITE_TCLAPI *createProc)" >> sqlite_tcl.h
+The system cannot find the path specified.
+        echo #ifndef SQLITE_TCLAPI > sqlite_tclDecls.h
+        echo #  define SQLITE_TCLAPI >> sqlite_tclDecls.h
+        echo #endif >> sqlite_tclDecls.h
+        type "C:\Tcl\include\tclDecls.h"  | tclsh ..\src\tool\replace.tcl regsub "^(EXTERN(?: CONST\d+?)?\s+?[^\(]*?\s+?)Tcl_" "\1 SQLITE_TCLAPI Tcl_"  | tclsh ..\src\tool\replace.tcl regsub "^(EXTERN\s+?(?:void|VOID)\s+?)TclFreeObj" "\1 SQLITE_TCLAPI TclFreeObj"  | tclsh ..\src\tool\replace.tcl regsub "\(\*tcl_" "(SQLITE_TCLAPI *tcl_"  | tclsh ..\src\tool\replace.tcl regsub "\(\*tclFreeObj" "(SQLITE_TCLAPI *tclFreeObj"  | tclsh ..\src\tool\replace.tcl regsub "\(\*" "(SQLITE_TCLAPI *" >> sqlite_tclDecls.h
+The system cannot find the path specified.
+        copy /Y ..\src\ext\fts5\fts5parse.y .
+        1 file(s) copied.
+        copy /B fts5parse.y +,,
+        1 file(s) copied.
+        del /Q fts5parse.h 2>NUL
+        .\lemon.exe  -DSQLITE_MAX_TRIGGER_DEPTH=100  -DSQLITE_ENABLE_FTS3=1 -DSQLITE_ENABLE_FTS5=1 -DSQLITE_ENABLE_RTREE=1 -DSQLITE_ENABLE_GEOPOLY=1 -DSQLITE_ENABLE_STMTVTAB=1 -DSQLITE_ENABLE_DBPAGE_VTAB=1 -DSQLITE_ENABLE_DBSTAT_VTAB=1 -DSQLITE_ENABLE_BYTECODE_VTAB=1 -DSQLITE_ENABLE_COLUMN_METADATA=1 -DSQLITE_ENABLE_MATH_FUNCTIONS  -DSQLITE_ENABLE_FTS4=1 -DSQLITE_SYSTEM_MALLOC=1 -DSQLITE_OMIT_LOCALTIME=1  -S fts5parse.y
+        jimsh0.exe ..\src\ext\fts5\tool\mkfts5c.tcl
+        copy /Y ..\src\ext\fts5\fts5.h .
+        1 file(s) copied.
+        copy /B fts5.h +,,
+        1 file(s) copied.
+        rmdir /Q/S tsrc 2>NUL
+        mkdir tsrc
+        jimsh0.exe ..\src\tool\cp.tcl ..\src\src\alter.c  ..\src\src\analyze.c  ..\src\src\attach.c  ..\src\src\auth.c  ..\src\src\backup.c  ..\src\src\bitvec.c  ..\src\src\btmutex.c  ..\src\src\btree.c  ..\src\src\build.c  ..\src\src\callback.c  ..\src\src\complete.c  ..\src\src\ctime.c  ..\src\src\date.c  ..\src\src\dbpage.c  ..\src\src\dbstat.c  ..\src\src\delete.c  ..\src\src\expr.c  ..\src\src\fault.c  ..\src\src\fkey.c  ..\src\src\func.c  ..\src\src\global.c  ..\src\src\hash.c  ..\src\src\insert.c  ..\src\src\json.c  ..\src\src\legacy.c  ..\src\src\loadext.c  ..\src\src\main.c  ..\src\src\malloc.c  ..\src\src\mem0.c  ..\src\src\mem1.c  ..\src\src\mem2.c  ..\src\src\mem3.c  ..\src\src\mem5.c  ..\src\src\memdb.c  ..\src\src\memjournal.c  ..\src\src\mutex.c  ..\src\src\mutex_noop.c  ..\src\src\mutex_unix.c  ..\src\src\mutex_w32.c  ..\src\src\notify.c  ..\src\src\os.c  ..\src\src\os_kv.c  ..\src\src\os_unix.c  ..\src\src\os_win.c ..\src\src\pager.c  ..\src\src\pcache.c  ..\src\src\pcache1.c  ..\src\src\pragma.c  ..\src\src\prepare.c  ..\src\src\printf.c  ..\src\src\random.c  ..\src\src\resolve.c  ..\src\src\rowset.c  ..\src\src\select.c  ..\src\src\status.c  ..\src\src\table.c  ..\src\src\threads.c  ..\src\src\tclsqlite.c  ..\src\src\tokenize.c  ..\src\src\treeview.c  ..\src\src\trigger.c  ..\src\src\utf.c  ..\src\src\update.c  ..\src\src\upsert.c  ..\src\src\util.c  ..\src\src\vacuum.c  ..\src\src\vdbe.c  ..\src\src\vdbeapi.c  ..\src\src\vdbeaux.c  ..\src\src\vdbeblob.c  ..\src\src\vdbemem.c  ..\src\src\vdbesort.c  ..\src\src\vdbetrace.c  ..\src\src\vdbevtab.c  ..\src\src\vtab.c  ..\src\src\wal.c  ..\src\src\walker.c  ..\src\src\where.c  ..\src\src\wherecode.c  ..\src\src\whereexpr.c  ..\src\src\window.c ..\src\src\parse.y ..\src\src\btree.h  ..\src\src\btreeInt.h  ..\src\src\hash.h  ..\src\src\hwtime.h  ..\src\src\msvc.h  ..\src\src\mutex.h  ..\src\src\os.h  ..\src\src\os_common.h  ..\src\src\os_setup.h  ..\src\src\os_win.h ..\src\src\pager.h  ..\src\src\pcache.h  ..\src\src\pragma.h  ..\src\src\sqlite.h.in  ..\src\src\sqlite3ext.h  ..\src\src\sqliteInt.h  ..\src\src\sqliteLimit.h  ..\src\src\vdbe.h  ..\src\src\vdbeInt.h  ..\src\src\vxworks.h  ..\src\src\wal.h  ..\src\src\whereInt.h ..\src\ext\fts3\fts3.c  ..\src\ext\fts3\fts3_aux.c  ..\src\ext\fts3\fts3_expr.c  ..\src\ext\fts3\fts3_hash.c  ..\src\ext\fts3\fts3_icu.c  ..\src\ext\fts3\fts3_porter.c  ..\src\ext\fts3\fts3_snippet.c  ..\src\ext\fts3\fts3_tokenizer.c  ..\src\ext\fts3\fts3_tokenizer1.c  ..\src\ext\fts3\fts3_tokenize_vtab.c  ..\src\ext\fts3\fts3_unicode.c  ..\src\ext\fts3\fts3_unicode2.c  ..\src\ext\fts3\fts3_write.c  ..\src\ext\icu\icu.c  ..\src\ext\rtree\rtree.c  ..\src\ext\session\sqlite3session.c  ..\src\ext\rbu\sqlite3rbu.c  ..\src\ext\misc\stmt.c ..\src\ext\fts3\fts3.h  ..\src\ext\fts3\fts3Int.h  ..\src\ext\fts3\fts3_hash.h  ..\src\ext\fts3\fts3_tokenizer.h  ..\src\ext\icu\sqliteicu.h  ..\src\ext\rtree\rtree.h  ..\src\ext\rtree\geopoly.c  ..\src\ext\rbu\sqlite3rbu.h  ..\src\ext\session\sqlite3session.h opcodes.c  parse.c keywordhash.h  opcodes.h  parse.h  shell.c  sqlite3.h sqlite_tcl.h  sqlite_tclDecls.h fts5.c fts5.h tsrc
+        copy /B tsrc\fts5.c +,,
+        1 file(s) copied.
+        copy /B tsrc\fts5.h +,,
+        1 file(s) copied.
+        del /Q tsrc\sqlite.h.in tsrc\parse.y 2>NUL
+        jimsh0.exe ..\src\tool\vdbe-compress.tcl  < tsrc\vdbe.c > vdbe.new
+        move vdbe.new tsrc\vdbe.c
+        1 file(s) moved.
+        echo > .target_source
+        type tsrc\sqlite3ext.h | tclsh ..\src\tool\replace.tcl regsub "\(\*\)" "(SQLITE_CALLBACK *)"  | tclsh ..\src\tool\replace.tcl regsub "\(\*" "(SQLITE_APICALL *" > sqlite3ext.h
+        copy /Y sqlite3ext.h tsrc\sqlite3ext.h
+        1 file(s) copied.
+        cl -nologo -W4 -DINCLUDE_MSVC_H=1   -DSQLITE_OS_WIN=1 -I. -I..\src -I..\src\src -fp:precise /d2guard4 -D_ARM_WINAPI_PARTITION_DESKTOP_SDK_AVAILABLE -MT -DNDEBUG -DSQLITE_ENABLE_API_ARMOR=1 -D_CRT_SECURE_NO_DEPRECATE -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_DEPRECATE -D_CRT_NONSTDC_NO_WARNINGS -DSQLITE_THREADSAFE=1 -DSQLITE_THREAD_OVERRIDE_LOCK=-1  -DSQLITE_MAX_TRIGGER_DEPTH=100  -DSQLITE_ENABLE_FTS3=1 -DSQLITE_ENABLE_FTS5=1 -DSQLITE_ENABLE_RTREE=1 -DSQLITE_ENABLE_GEOPOLY=1 -DSQLITE_ENABLE_STMTVTAB=1 -DSQLITE_ENABLE_DBPAGE_VTAB=1 -DSQLITE_ENABLE_DBSTAT_VTAB=1 -DSQLITE_ENABLE_BYTECODE_VTAB=1 -DSQLITE_ENABLE_COLUMN_METADATA=1 -DSQLITE_ENABLE_MATH_FUNCTIONS  -DSQLITE_ENABLE_FTS4=1 -DSQLITE_SYSTEM_MALLOC=1 -DSQLITE_OMIT_LOCALTIME=1  -O2 -Zi -DSQLITE_HAVE_ZLIB=1 -I..\src\compat\zlib -DSQLITE_ENABLE_ICU=1 -I..\src\ext\icu -I..\src\compat\icu\include -Foicu.lo -Fdicu.pdb  -DSQLITE_API=__declspec(dllexport) -wd4054 -wd4055 -wd4100 -wd4127 -wd4130 -wd4152 -wd4189 -wd4206 -wd4210 -wd4232 -wd4244 -wd4305 -wd4306 -wd4702 -wd4706 -DSQLITE_CORE -c ..\src\ext\icu\icu.c
+icu.c
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+\build>nmake /f ..\src\Makefile.msc TOP=..\src USE_ICU=1 USE_ZLIB=1 USE_TCLSH_IN_PATH=1 FOR_WIN10=1 core
+
+Microsoft (R) Program Maintenance Utility Version 14.43.34808.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+        copy /Y ..\src\ext\session\sqlite3session.h .
+        1 file(s) copied.
+        copy /B sqlite3session.h +,,
+        1 file(s) copied.
+        cl -nologo -W4 -DINCLUDE_MSVC_H=1   -DSQLITE_OS_WIN=1 -I. -I..\src -I..\src\src -fp:precise /d2guard4 -D_ARM_WINAPI_PARTITION_DESKTOP_SDK_AVAILABLE -MT -DNDEBUG -DSQLITE_ENABLE_API_ARMOR=1 -D_CRT_SECURE_NO_DEPRECATE -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_DEPRECATE -D_CRT_NONSTDC_NO_WARNINGS -DSQLITE_THREADSAFE=1 -DSQLITE_THREAD_OVERRIDE_LOCK=-1  -DSQLITE_MAX_TRIGGER_DEPTH=100  -DSQLITE_ENABLE_FTS3=1 -DSQLITE_ENABLE_FTS5=1 -DSQLITE_ENABLE_RTREE=1 -DSQLITE_ENABLE_GEOPOLY=1 -DSQLITE_ENABLE_STMTVTAB=1 -DSQLITE_ENABLE_DBPAGE_VTAB=1 -DSQLITE_ENABLE_DBSTAT_VTAB=1 -DSQLITE_ENABLE_BYTECODE_VTAB=1 -DSQLITE_ENABLE_COLUMN_METADATA=1 -DSQLITE_ENABLE_MATH_FUNCTIONS  -DSQLITE_ENABLE_FTS4=1 -DSQLITE_SYSTEM_MALLOC=1 -DSQLITE_OMIT_LOCALTIME=1  -O2 -Zi -DSQLITE_HAVE_ZLIB=1 -I..\src\compat\zlib -DSQLITE_ENABLE_ICU=1 -I..\src\ext\icu -I..\src\compat\icu\include -Fesrc-verify.exe -wd4054 -wd4055 -wd4100 -wd4127 -wd4130 -wd4152 -wd4189 -wd4206 -wd4210 -wd4232 -wd4244 -wd4305 -wd4306 -wd4702 -wd4706 ..\src\tool\src-verify.c
+src-verify.c
+        jimsh0.exe ..\src\tool\mksqlite3c.tcl --linemacros=0 --useapicall
+        cl -nologo -W4 -DINCLUDE_MSVC_H=1   -DSQLITE_OS_WIN=1 -I. -I..\src -I..\src\src -fp:precise /d2guard4 -D_ARM_WINAPI_PARTITION_DESKTOP_SDK_AVAILABLE -MT -DNDEBUG -DSQLITE_ENABLE_API_ARMOR=1 -D_CRT_SECURE_NO_DEPRECATE -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_DEPRECATE -D_CRT_NONSTDC_NO_WARNINGS -DSQLITE_THREADSAFE=1 -DSQLITE_THREAD_OVERRIDE_LOCK=-1  -DSQLITE_MAX_TRIGGER_DEPTH=100  -DSQLITE_ENABLE_FTS3=1 -DSQLITE_ENABLE_FTS5=1 -DSQLITE_ENABLE_RTREE=1 -DSQLITE_ENABLE_GEOPOLY=1 -DSQLITE_ENABLE_STMTVTAB=1 -DSQLITE_ENABLE_DBPAGE_VTAB=1 -DSQLITE_ENABLE_DBSTAT_VTAB=1 -DSQLITE_ENABLE_BYTECODE_VTAB=1 -DSQLITE_ENABLE_COLUMN_METADATA=1 -DSQLITE_ENABLE_MATH_FUNCTIONS  -DSQLITE_ENABLE_FTS4=1 -DSQLITE_SYSTEM_MALLOC=1 -DSQLITE_OMIT_LOCALTIME=1  -O2 -Zi -DSQLITE_HAVE_ZLIB=1 -I..\src\compat\zlib -DSQLITE_ENABLE_ICU=1 -I..\src\ext\icu -I..\src\compat\icu\include -Fosqlite3.lo -Fdsqlite3.pdb  -DSQLITE_API=__declspec(dllexport) -c sqlite3.c
+sqlite3.c
+sqlite3.c(219078): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+sqlite3.c(219134): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+        echo #ifndef SQLITE_RESOURCE_VERSION > sqlite3rc.h
+        for /F %V in ('type "..\src\VERSION"') do (  echo #define SQLITE_RESOURCE_VERSION %V  | jimsh0.exe ..\src\tool\replace.tcl exact . ^, >> sqlite3rc.h  )
+
+..\build>(echo #define SQLITE_RESOURCE_VERSION 3.49.1   | jimsh0.exe ..\src\tool\replace.tcl exact . ,   1>>sqlite3rc.h )
+        echo #endif >> sqlite3rc.h
+        rc -DSQLITE_OS_WIN=1 -I. -I..\src -I..\src\src   -DNDEBUG -DSQLITE_ENABLE_API_ARMOR=1 -D_CRT_SECURE_NO_DEPRECATE -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_DEPRECATE -D_CRT_NONSTDC_NO_WARNINGS -DSQLITE_THREADSAFE=1 -DSQLITE_THREAD_OVERRIDE_LOCK=-1  -DSQLITE_MAX_TRIGGER_DEPTH=100  -DSQLITE_ENABLE_FTS3=1 -DSQLITE_ENABLE_FTS5=1 -DSQLITE_ENABLE_RTREE=1 -DSQLITE_ENABLE_GEOPOLY=1 -DSQLITE_ENABLE_STMTVTAB=1 -DSQLITE_ENABLE_DBPAGE_VTAB=1 -DSQLITE_ENABLE_DBSTAT_VTAB=1 -DSQLITE_ENABLE_BYTECODE_VTAB=1 -DSQLITE_ENABLE_COLUMN_METADATA=1 -DSQLITE_ENABLE_MATH_FUNCTIONS  -DSQLITE_ENABLE_FTS4=1 -DSQLITE_SYSTEM_MALLOC=1 -DSQLITE_OMIT_LOCALTIME=1  -DSQLITE_HAVE_ZLIB=1 -I..\src\compat\zlib -DSQLITE_ENABLE_ICU=1 -I..\src\ext\icu -I..\src\compat\icu\include -r -fo sqlite3res.lo ..\src\src\sqlite3.rc
+Microsoft (R) Windows (R) Resource Compiler Version 10.0.10011.16384
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+        link.exe /DEBUG  /NOLOGO /MACHINE:x64 /DYNAMICBASE /NODEFAULTLIB:kernel32.lib mincore.lib /guard:cf "/LIBPATH:C:\Program Files (x86)\Windows Kits\10\lib\10.0.20348.0\ucrt\x64" /NODEFAULTLIB:libucrt.lib /DEFAULTLIB:ucrt.lib  /LIBPATH:..\src\compat\zlib /LIBPATH:..\src\compat\icu\lib /DLL  /OUT:winsqlite3.dll sqlite3.lo sqlite3res.lo  zlib.lib icuuc.lib icuin.lib
+   Creating library winsqlite3.lib and object winsqlite3.exp
+        lib.exe /NOLOGO /MACHINE:x64 /OUT:libsqlite3.lib sqlite3.lo
+        pushd ..\src\compat\zlib && nmake.exe /f win32\Makefile.msc clean zlib.lib && popd
+
+Microsoft (R) Program Maintenance Utility Version 14.43.34808.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+        del zlib.lib
+        del zlib1.dll
+Could Not Find ..\src\compat\zlib\zlib1.dll
+        del zdll.lib
+Could Not Find ..\src\compat\zlib\zdll.lib
+        del *.obj
+        del *.res
+Could Not Find ..\src\compat\zlib\*.res
+        del *.exp
+Could Not Find ..\src\compat\zlib\*.exp
+        del *.exe
+Could Not Find ..\src\compat\zlib\*.exe
+        del *.pdb
+        del *.manifest
+Could Not Find ..\src\compat\zlib\*.manifest
+        del foo.gz
+Could Not Find ..\src\compat\zlib\foo.gz
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\adler32.c
+adler32.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\compress.c
+compress.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\crc32.c
+crc32.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\deflate.c
+deflate.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\gzclose.c
+gzclose.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\gzlib.c
+gzlib.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\gzread.c
+gzread.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\gzwrite.c
+gzwrite.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\infback.c
+infback.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\inflate.c
+inflate.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\inftrees.c
+inftrees.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\inffast.c
+inffast.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\trees.c
+trees.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\uncompr.c
+uncompr.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\zutil.c
+zutil.c
+        lib -nologo -out:zlib.lib adler32.obj compress.obj crc32.obj deflate.obj gzclose.obj gzlib.obj gzread.obj  gzwrite.obj infback.obj inflate.obj inftrees.obj inffast.obj trees.obj uncompr.obj zutil.obj
+        cl -nologo -W4 -DINCLUDE_MSVC_H=1   -DSQLITE_OS_WIN=1 -I. -I..\src -I..\src\src -fp:precise /d2guard4 -D_ARM_WINAPI_PARTITION_DESKTOP_SDK_AVAILABLE -MT -DNDEBUG -DSQLITE_ENABLE_API_ARMOR=1 -D_CRT_SECURE_NO_DEPRECATE -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_DEPRECATE -D_CRT_NONSTDC_NO_WARNINGS -DSQLITE_THREADSAFE=1 -DSQLITE_THREAD_OVERRIDE_LOCK=-1  -DSQLITE_MAX_TRIGGER_DEPTH=100  -DSQLITE_ENABLE_FTS3=1 -DSQLITE_ENABLE_FTS5=1 -DSQLITE_ENABLE_RTREE=1 -DSQLITE_ENABLE_GEOPOLY=1 -DSQLITE_ENABLE_STMTVTAB=1 -DSQLITE_ENABLE_DBPAGE_VTAB=1 -DSQLITE_ENABLE_DBSTAT_VTAB=1 -DSQLITE_ENABLE_BYTECODE_VTAB=1 -DSQLITE_ENABLE_COLUMN_METADATA=1 -DSQLITE_ENABLE_MATH_FUNCTIONS  -DSQLITE_ENABLE_FTS4=1 -DSQLITE_SYSTEM_MALLOC=1 -DSQLITE_OMIT_LOCALTIME=1  -O2 -Zi -DSQLITE_HAVE_ZLIB=1 -I..\src\compat\zlib -DSQLITE_ENABLE_ICU=1 -I..\src\ext\icu -I..\src\compat\icu\include -Fewinsqlite3shell.exe  -DSQLITE_API=__declspec(dllimport) -DHAVE_READLINE=0 shell.c   /link  /DEBUG  /NOLOGO /MACHINE:x64 /DYNAMICBASE /NODEFAULTLIB:kernel32.lib mincore.lib /guard:cf "/LIBPATH:C:\Program Files (x86)\Windows Kits\10\lib\10.0.20348.0\ucrt\x64" /NODEFAULTLIB:libucrt.lib /DEFAULTLIB:ucrt.lib winsqlite3.lib  /LIBPATH:..\src\compat\zlib /LIBPATH:..\src\compat\icu\lib sqlite3res.lo   zlib.lib icuuc.lib icuin.lib
+shell.c
+..\build\shell.c(11054) : warning C4701: potentially uninitialized local variable 'lfh' used
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+\build>nmake /f ..\src\Makefile.msc TOP=..\src USE_ICU=1 USE_ZLIB=1 USE_TCLSH_IN_PATH=1 FOR_WIN10=1 USE_CRT_DLL=1 core
+
+Microsoft (R) Program Maintenance Utility Version 14.43.34808.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+        pushd ..\src\compat\zlib && nmake.exe /f win32\Makefile.msc clean zlib.lib && popd
+
+Microsoft (R) Program Maintenance Utility Version 14.43.34808.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+        del zlib.lib
+        del zlib1.dll
+Could Not Find ..\src\compat\zlib\zlib1.dll
+        del zdll.lib
+Could Not Find ..\src\compat\zlib\zdll.lib
+        del *.obj
+        del *.res
+Could Not Find ..\src\compat\zlib\*.res
+        del *.exp
+Could Not Find ..\src\compat\zlib\*.exp
+        del *.exe
+Could Not Find ..\src\compat\zlib\*.exe
+        del *.pdb
+        del *.manifest
+Could Not Find ..\src\compat\zlib\*.manifest
+        del foo.gz
+Could Not Find ..\src\compat\zlib\foo.gz
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\adler32.c
+adler32.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\compress.c
+compress.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\crc32.c
+crc32.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\deflate.c
+deflate.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\gzclose.c
+gzclose.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\gzlib.c
+gzlib.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\gzread.c
+gzread.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\gzwrite.c
+gzwrite.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\infback.c
+infback.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\inflate.c
+inflate.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\inftrees.c
+inftrees.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\inffast.c
+inffast.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\trees.c
+trees.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\uncompr.c
+uncompr.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\zutil.c
+zutil.c
+        lib -nologo -out:zlib.lib adler32.obj compress.obj crc32.obj deflate.obj gzclose.obj gzlib.obj gzread.obj  gzwrite.obj infback.obj inflate.obj inftrees.obj inffast.obj trees.obj uncompr.obj zutil.obj
+        cl -nologo -W4 -DINCLUDE_MSVC_H=1   -DSQLITE_OS_WIN=1 -I. -I..\src -I..\src\src -fp:precise /d2guard4 -D_ARM_WINAPI_PARTITION_DESKTOP_SDK_AVAILABLE -MD -DNDEBUG -DSQLITE_ENABLE_API_ARMOR=1 -D_CRT_SECURE_NO_DEPRECATE -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_DEPRECATE -D_CRT_NONSTDC_NO_WARNINGS -DSQLITE_THREADSAFE=1 -DSQLITE_THREAD_OVERRIDE_LOCK=-1  -DSQLITE_MAX_TRIGGER_DEPTH=100  -DSQLITE_ENABLE_FTS3=1 -DSQLITE_ENABLE_FTS5=1 -DSQLITE_ENABLE_RTREE=1 -DSQLITE_ENABLE_GEOPOLY=1 -DSQLITE_ENABLE_STMTVTAB=1 -DSQLITE_ENABLE_DBPAGE_VTAB=1 -DSQLITE_ENABLE_DBSTAT_VTAB=1 -DSQLITE_ENABLE_BYTECODE_VTAB=1 -DSQLITE_ENABLE_COLUMN_METADATA=1 -DSQLITE_ENABLE_MATH_FUNCTIONS  -DSQLITE_ENABLE_FTS4=1 -DSQLITE_SYSTEM_MALLOC=1 -DSQLITE_OMIT_LOCALTIME=1  -O2 -Zi -DSQLITE_HAVE_ZLIB=1 -I..\src\compat\zlib -DSQLITE_ENABLE_ICU=1 -I..\src\ext\icu -I..\src\compat\icu\include -Fewinsqlite3shell.exe  -DSQLITE_API=__declspec(dllimport) -DHAVE_READLINE=0 shell.c   /link  /DEBUG  /NOLOGO /MACHINE:x64 /DYNAMICBASE /NODEFAULTLIB:kernel32.lib mincore.lib /guard:cf "/LIBPATH:C:\Program Files (x86)\Windows Kits\10\lib\10.0.20348.0\ucrt\x64" /NODEFAULTLIB:libucrt.lib /DEFAULTLIB:ucrt.lib winsqlite3.lib  /LIBPATH:..\src\compat\zlib /LIBPATH:..\src\compat\icu\lib sqlite3res.lo   zlib.lib icuuc.lib icuin.lib
+shell.c
+..\build\shell.c(11054) : warning C4701: potentially uninitialized local variable 'lfh' used
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+\build>nmake /f ..\src\Makefile.msc TOP=..\src USE_ICU=1 USE_ZLIB=1 USE_TCLSH_IN_PATH=1 FOR_WIN10=1 USE_CRT_DLL=1 STATICALLY_LINK_TCL=1 DYNAMIC_SHELL=0 SESSION=1 core
+
+Microsoft (R) Program Maintenance Utility Version 14.43.34808.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+        lib -nologo -out:zlib.lib adler32.obj compress.obj crc32.obj deflate.obj gzclose.obj gzlib.obj gzread.obj  gzwrite.obj infback.obj inflate.obj inftrees.obj inffast.obj trees.obj uncompr.obj zutil.obj
+        cl -nologo -W4 -DINCLUDE_MSVC_H=1  -DSTATIC_BUILD  -DSQLITE_OS_WIN=1 -I. -I..\src -I..\src\src -fp:precise /d2guard4 -D_ARM_WINAPI_PARTITION_DESKTOP_SDK_AVAILABLE -MD -DNDEBUG -DSQLITE_ENABLE_API_ARMOR=1 -D_CRT_SECURE_NO_DEPRECATE -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_DEPRECATE -D_CRT_NONSTDC_NO_WARNINGS -DSQLITE_THREADSAFE=1 -DSQLITE_THREAD_OVERRIDE_LOCK=-1  -DSQLITE_MAX_TRIGGER_DEPTH=100  -DSQLITE_ENABLE_FTS3=1 -DSQLITE_ENABLE_FTS5=1 -DSQLITE_ENABLE_RTREE=1 -DSQLITE_ENABLE_GEOPOLY=1 -DSQLITE_ENABLE_STMTVTAB=1 -DSQLITE_ENABLE_DBPAGE_VTAB=1 -DSQLITE_ENABLE_DBSTAT_VTAB=1 -DSQLITE_ENABLE_BYTECODE_VTAB=1 -DSQLITE_ENABLE_COLUMN_METADATA=1 -DSQLITE_ENABLE_SESSION=1 -DSQLITE_ENABLE_PREUPDATE_HOOK=1 -DSQLITE_ENABLE_MATH_FUNCTIONS  -DSQLITE_ENABLE_FTS4=1 -DSQLITE_SYSTEM_MALLOC=1 -DSQLITE_OMIT_LOCALTIME=1  -O2 -Zi -DSQLITE_HAVE_ZLIB=1 -I..\src\compat\zlib -DSQLITE_ENABLE_ICU=1 -I..\src\ext\icu -I..\src\compat\icu\include -Fewinsqlite3shell.exe  -DSQLITE_API=__declspec(dllimport) -DHAVE_READLINE=0 shell.c   /link  /DEBUG  /NOLOGO /MACHINE:x64 /DYNAMICBASE /NODEFAULTLIB:kernel32.lib mincore.lib /guard:cf "/LIBPATH:C:\Program Files (x86)\Windows Kits\10\lib\10.0.20348.0\ucrt\x64" /NODEFAULTLIB:libucrt.lib /DEFAULTLIB:ucrt.lib winsqlite3.lib  /LIBPATH:..\src\compat\zlib /LIBPATH:..\src\compat\icu\lib sqlite3res.lo   zlib.lib icuuc.lib icuin.lib
+shell.c
+..\build\shell.c(11054) : warning C4701: potentially uninitialized local variable 'lfh' used
+shell.obj : error LNK2019: unresolved external symbol __imp_sqlite3session_create referenced in function do_meta_command
+shell.obj : error LNK2019: unresolved external symbol __imp_sqlite3session_delete referenced in function session_close
+shell.obj : error LNK2019: unresolved external symbol __imp_sqlite3session_enable referenced in function do_meta_command
+shell.obj : error LNK2019: unresolved external symbol __imp_sqlite3session_indirect referenced in function do_meta_command
+shell.obj : error LNK2019: unresolved external symbol __imp_sqlite3session_attach referenced in function do_meta_command
+shell.obj : error LNK2019: unresolved external symbol __imp_sqlite3session_table_filter referenced in function do_meta_command
+shell.obj : error LNK2019: unresolved external symbol __imp_sqlite3session_changeset referenced in function do_meta_command
+shell.obj : error LNK2019: unresolved external symbol __imp_sqlite3session_patchset referenced in function do_meta_command
+shell.obj : error LNK2019: unresolved external symbol __imp_sqlite3session_isempty referenced in function do_meta_command
+winsqlite3shell.exe : fatal error LNK1120: 9 unresolved externals
+NMAKE : fatal error U1077: 'cl -nologo -W4 -DINCLUDE_MSVC_H=1  -DSTATIC_BUILD  -DSQLITE_OS_WIN=1 -I. -I..\src -I..\src\src -fp:precise /d2guard4 -D_ARM_WINAPI_PARTITION_DESKTOP_SDK_AVAILABLE -MD -DNDEBUG -DSQLITE_ENABLE_API_ARMOR=1 -D_CRT_SECURE_NO_DEPRECATE -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_DEPRECATE -D_CRT_NONSTDC_NO_WARNINGS -DSQLITE_THREADSAFE=1 -DSQLITE_THREAD_OVERRIDE_LOCK=-1  -DSQLITE_MAX_TRIGGER_DEPTH=100  -DSQLITE_ENABLE_FTS3=1 -DSQLITE_ENABLE_FTS5=1 -DSQLITE_ENABLE_RTREE=1 -DSQLITE_ENABLE_GEOPOLY=1 -DSQLITE_ENABLE_STMTVTAB=1 -DSQLITE_ENABLE_DBPAGE_VTAB=1 -DSQLITE_ENABLE_DBSTAT_VTAB=1 -DSQLITE_ENABLE_BYTECODE_VTAB=1 -DSQLITE_ENABLE_COLUMN_METADATA=1 -DSQLITE_ENABLE_SESSION=1 -DSQLITE_ENABLE_PREUPDATE_HOOK=1 -DSQLITE_ENABLE_MATH_FUNCTIONS  -DSQLITE_ENABLE_FTS4=1 -DSQLITE_SYSTEM_MALLOC=1 -DSQLITE_OMIT_LOCALTIME=1  -O2 -Zi -DSQLITE_HAVE_ZLIB=1 -I..\src\compat\zlib -DSQLITE_ENABLE_ICU=1 -I..\src\ext\icu -I..\src\compat\icu\include -Fewinsqlite3shell.exe  -DSQLITE_API=__declspec(dllimport) -DHAVE_READLINE=0 shell.c   /link  /DEBUG  /NOLOGO /MACHINE:x64 /DYNAMICBASE /NODEFAULTLIB:kernel32.lib mincore.lib /guard:cf "/LIBPATH:C:\Program Files (x86)\Windows Kits\10\lib\10.0.20348.0\ucrt\x64" /NODEFAULTLIB:libucrt.lib /DEFAULTLIB:ucrt.lib winsqlite3.lib  /LIBPATH:..\src\compat\zlib /LIBPATH:..\src\compat\icu\lib sqlite3res.lo   zlib.lib icuuc.lib icuin.lib ' : return code '0x2'
+Stop.
+
+..\build>nmake /f ..\src\Makefile.msc TOP=..\src USE_ICU=1 USE_ZLIB=1 USE_TCLSH_IN_PATH=1 FOR_WIN10=1 USE_CRT_DLL=1 STATICALLY_LINK_TCL=1 DYNAMIC_SHELL=0 SESSION=1 clean
+
+Microsoft (R) Program Maintenance Utility Version 14.43.34808.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+        del /Q *.exp *.lo *.ilk *.lib *.obj *.ncb *.pdb *.sdf *.suo 2>NUL
+        del /Q *.bsc *.cod *.da *.bb *.bbg *.vc gmon.out 2>NUL
+        del /Q sqlite3.def tclsqlite3.def 2>NUL
+        del /Q winsqlite3shell.exe winsqlite3.dll Replace.exe 2>NUL
+        del /Q tclsqlite3.dll pkgIndex.tcl 2>NUL
+        del /Q opcodes.c opcodes.h 2>NUL
+        del /Q lemon.* lempar.c parse.* 2>NUL
+        del /Q mksourceid.* mkkeywordhash.* keywordhash.h 2>NUL
+        del /Q notasharedlib.* 2>NUL
+        rmdir /Q/S .deps 2>NUL
+        rmdir /Q/S .libs 2>NUL
+        rmdir /Q/S tsrc 2>NUL
+        del /Q .target_source 2>NUL
+        del /Q tclsqlite3.exe sqlite_tcl.h sqlite_tclDecls.h 2>NUL
+        del /Q lsm.dll lsmtest.exe 2>NUL
+        del /Q atrc.exe changesetfuzz.exe dbtotxt.exe index_usage.exe 2>NUL
+        del /Q testloadext.dll 2>NUL
+        del /Q testfixture.exe test.db 2>NUL
+        del /Q LogEst.exe fts3view.exe rollback-test.exe showdb.exe dbdump.exe 2>NUL
+        del /Q changeset.exe 2>NUL
+        del /Q showjournal.exe showstat4.exe showwal.exe speedtest1.exe 2>NUL
+        del /Q mptester.exe wordcount.exe rbu.exe srcck1.exe 2>NUL
+        del /Q sqlite3.c sqlite3-*.c sqlite3.h 2>NUL
+        del /Q sqlite3rc.h 2>NUL
+        del /Q shell.c sqlite3ext.h sqlite3session.h 2>NUL
+        del /Q sqlite3_analyzer.exe sqlite3_analyzer.c sqlite3_rsync.exe 2>NUL
+        del /Q sqlite-*-output.vsix 2>NUL
+        del /Q fuzzershell.exe fuzzcheck.exe sqldiff.exe dbhash.exe 2>NUL
+        del /Q sqltclsh.* 2>NUL
+        del /Q dbfuzz.exe sessionfuzz.exe threadtest3.exe 2>NUL
+        del /Q kvtest.exe ossshell.exe scrub.exe 2>NUL
+        del /Q showshm.exe sqlite3_checker.* sqlite3_expert.exe 2>NUL
+        del /Q fts5.* fts5parse.* 2>NUL
+        del /Q lsm.h lsm1.c 2>NUL
+        del /q src-verify.exe 2>NUL
+
+..\build>nmake /f ..\src\Makefile.msc TOP=..\src USE_ICU=1 USE_ZLIB=1 USE_TCLSH_IN_PATH=1 FOR_WIN10=1 USE_CRT_DLL=1 STATICALLY_LINK_TCL=1 DYNAMIC_SHELL=0 SESSION=1 core
+
+Microsoft (R) Program Maintenance Utility Version 14.43.34808.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+        copy /Y ..\src\tool\lempar.c .
+        1 file(s) copied.
+        copy /B lempar.c +,,
+        1 file(s) copied.
+        cl -nologo -W4 -Fdlemon.pdb  -DSTATIC_BUILD  /d2guard4 -D_ARM_WINAPI_PARTITION_DESKTOP_SDK_AVAILABLE -MD -DNDEBUG -D_CRT_SECURE_NO_DEPRECATE -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_DEPRECATE -D_CRT_NONSTDC_NO_WARNINGS -O2 -Zi -wd4054 -wd4055 -wd4100 -wd4127 -wd4130 -wd4152 -wd4189 -wd4206 -wd4210 -wd4232 -wd4244 -wd4305 -wd4306 -wd4702 -wd4706 -Daccess=_access  -Felemon.exe ..\src\tool\lemon.c /link /DEBUG
+lemon.c
+        del /Q parse.y parse.h parse.h.temp 2>NUL
+        copy /Y ..\src\src\parse.y .
+        1 file(s) copied.
+        copy /B parse.y +,,
+        1 file(s) copied.
+        .\lemon.exe  -DSQLITE_MAX_TRIGGER_DEPTH=100  -DSQLITE_ENABLE_FTS3=1 -DSQLITE_ENABLE_FTS5=1 -DSQLITE_ENABLE_RTREE=1 -DSQLITE_ENABLE_GEOPOLY=1 -DSQLITE_ENABLE_STMTVTAB=1 -DSQLITE_ENABLE_DBPAGE_VTAB=1 -DSQLITE_ENABLE_DBSTAT_VTAB=1 -DSQLITE_ENABLE_BYTECODE_VTAB=1 -DSQLITE_ENABLE_COLUMN_METADATA=1 -DSQLITE_ENABLE_SESSION=1 -DSQLITE_ENABLE_PREUPDATE_HOOK=1 -DSQLITE_ENABLE_MATH_FUNCTIONS  -DSQLITE_ENABLE_FTS4=1 -DSQLITE_SYSTEM_MALLOC=1 -DSQLITE_OMIT_LOCALTIME=1  -S parse.y
+        type parse.h ..\src\src\vdbe.c | jimsh0.exe ..\src\tool\mkopcodeh.tcl > opcodes.h
+parse.h
+
+..\src\src\vdbe.c
+        jimsh0.exe ..\src\tool\mkopcodec.tcl opcodes.h > opcodes.c
+        cl -nologo -W4 -Fdmkkeywordhash.pdb  -DSTATIC_BUILD  /d2guard4 -D_ARM_WINAPI_PARTITION_DESKTOP_SDK_AVAILABLE -MD -DNDEBUG -D_CRT_SECURE_NO_DEPRECATE -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_DEPRECATE -D_CRT_NONSTDC_NO_WARNINGS -O2 -Zi -wd4054 -wd4055 -wd4100 -wd4127 -wd4130 -wd4152 -wd4189 -wd4206 -wd4210 -wd4232 -wd4244 -wd4305 -wd4306 -wd4702 -wd4706 -Femkkeywordhash.exe  -DSQLITE_MAX_TRIGGER_DEPTH=100  -DSQLITE_ENABLE_FTS3=1 -DSQLITE_ENABLE_FTS5=1 -DSQLITE_ENABLE_RTREE=1 -DSQLITE_ENABLE_GEOPOLY=1 -DSQLITE_ENABLE_STMTVTAB=1 -DSQLITE_ENABLE_DBPAGE_VTAB=1 -DSQLITE_ENABLE_DBSTAT_VTAB=1 -DSQLITE_ENABLE_BYTECODE_VTAB=1 -DSQLITE_ENABLE_COLUMN_METADATA=1 -DSQLITE_ENABLE_SESSION=1 -DSQLITE_ENABLE_PREUPDATE_HOOK=1 -DSQLITE_ENABLE_MATH_FUNCTIONS  -DSQLITE_ENABLE_FTS4=1 -DSQLITE_SYSTEM_MALLOC=1 -DSQLITE_OMIT_LOCALTIME=1   ..\src\tool\mkkeywordhash.c /link /DEBUG
+mkkeywordhash.c
+        .\mkkeywordhash.exe > keywordhash.h
+        jimsh0.exe ..\src\tool\mkshellc.tcl shell.c
+        cl -nologo -W4 -Fdmksourceid.pdb  -DSTATIC_BUILD  /d2guard4 -D_ARM_WINAPI_PARTITION_DESKTOP_SDK_AVAILABLE -MD -DNDEBUG -D_CRT_SECURE_NO_DEPRECATE -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_DEPRECATE -D_CRT_NONSTDC_NO_WARNINGS -O2 -Zi -wd4054 -wd4055 -wd4100 -wd4127 -wd4130 -wd4152 -wd4189 -wd4206 -wd4210 -wd4232 -wd4244 -wd4305 -wd4306 -wd4702 -wd4706 -Femksourceid.exe ..\src\tool\mksourceid.c /link /DEBUG
+mksourceid.c
+        jimsh0.exe ..\src\tool\mksqlite3h.tcl "../src" -o sqlite3.h --useapicall
+        type "C:\Tcl\include\tcl.h" | tclsh ..\src\tool\replace.tcl exact tclDecls.h sqlite_tclDecls.h  | tclsh ..\src\tool\replace.tcl regsub "typedef (.*?)\(Tcl_" "typedef \1 (SQLITE_TCLAPI Tcl_"  | tclsh ..\src\tool\replace.tcl exact "void (*freeProc)" "void (SQLITE_TCLAPI *freeProc)"  | tclsh ..\src\tool\replace.tcl exact "Tcl_HashEntry *(*findProc)" "Tcl_HashEntry *(SQLITE_TCLAPI *findProc)"  | tclsh ..\src\tool\replace.tcl exact "Tcl_HashEntry *(*createProc)" "Tcl_HashEntry *(SQLITE_TCLAPI *createProc)" >> sqlite_tcl.h
+The system cannot find the path specified.
+        echo #ifndef SQLITE_TCLAPI > sqlite_tclDecls.h
+        echo #  define SQLITE_TCLAPI >> sqlite_tclDecls.h
+        echo #endif >> sqlite_tclDecls.h
+        type "C:\Tcl\include\tclDecls.h"  | tclsh ..\src\tool\replace.tcl regsub "^(EXTERN(?: CONST\d+?)?\s+?[^\(]*?\s+?)Tcl_" "\1 SQLITE_TCLAPI Tcl_"  | tclsh ..\src\tool\replace.tcl regsub "^(EXTERN\s+?(?:void|VOID)\s+?)TclFreeObj" "\1 SQLITE_TCLAPI TclFreeObj"  | tclsh ..\src\tool\replace.tcl regsub "\(\*tcl_" "(SQLITE_TCLAPI *tcl_"  | tclsh ..\src\tool\replace.tcl regsub "\(\*tclFreeObj" "(SQLITE_TCLAPI *tclFreeObj"  | tclsh ..\src\tool\replace.tcl regsub "\(\*" "(SQLITE_TCLAPI *" >> sqlite_tclDecls.h
+The system cannot find the path specified.
+        copy /Y ..\src\ext\fts5\fts5parse.y .
+        1 file(s) copied.
+        copy /B fts5parse.y +,,
+        1 file(s) copied.
+        del /Q fts5parse.h 2>NUL
+        .\lemon.exe  -DSQLITE_MAX_TRIGGER_DEPTH=100  -DSQLITE_ENABLE_FTS3=1 -DSQLITE_ENABLE_FTS5=1 -DSQLITE_ENABLE_RTREE=1 -DSQLITE_ENABLE_GEOPOLY=1 -DSQLITE_ENABLE_STMTVTAB=1 -DSQLITE_ENABLE_DBPAGE_VTAB=1 -DSQLITE_ENABLE_DBSTAT_VTAB=1 -DSQLITE_ENABLE_BYTECODE_VTAB=1 -DSQLITE_ENABLE_COLUMN_METADATA=1 -DSQLITE_ENABLE_SESSION=1 -DSQLITE_ENABLE_PREUPDATE_HOOK=1 -DSQLITE_ENABLE_MATH_FUNCTIONS  -DSQLITE_ENABLE_FTS4=1 -DSQLITE_SYSTEM_MALLOC=1 -DSQLITE_OMIT_LOCALTIME=1  -S fts5parse.y
+        jimsh0.exe ..\src\ext\fts5\tool\mkfts5c.tcl
+        copy /Y ..\src\ext\fts5\fts5.h .
+        1 file(s) copied.
+        copy /B fts5.h +,,
+        1 file(s) copied.
+        rmdir /Q/S tsrc 2>NUL
+        mkdir tsrc
+        jimsh0.exe ..\src\tool\cp.tcl ..\src\src\alter.c  ..\src\src\analyze.c  ..\src\src\attach.c  ..\src\src\auth.c  ..\src\src\backup.c  ..\src\src\bitvec.c  ..\src\src\btmutex.c  ..\src\src\btree.c  ..\src\src\build.c  ..\src\src\callback.c  ..\src\src\complete.c  ..\src\src\ctime.c  ..\src\src\date.c  ..\src\src\dbpage.c  ..\src\src\dbstat.c  ..\src\src\delete.c  ..\src\src\expr.c  ..\src\src\fault.c  ..\src\src\fkey.c  ..\src\src\func.c  ..\src\src\global.c  ..\src\src\hash.c  ..\src\src\insert.c  ..\src\src\json.c  ..\src\src\legacy.c  ..\src\src\loadext.c  ..\src\src\main.c  ..\src\src\malloc.c  ..\src\src\mem0.c  ..\src\src\mem1.c  ..\src\src\mem2.c  ..\src\src\mem3.c  ..\src\src\mem5.c  ..\src\src\memdb.c  ..\src\src\memjournal.c  ..\src\src\mutex.c  ..\src\src\mutex_noop.c  ..\src\src\mutex_unix.c  ..\src\src\mutex_w32.c  ..\src\src\notify.c  ..\src\src\os.c  ..\src\src\os_kv.c  ..\src\src\os_unix.c  ..\src\src\os_win.c ..\src\src\pager.c  ..\src\src\pcache.c  ..\src\src\pcache1.c  ..\src\src\pragma.c  ..\src\src\prepare.c  ..\src\src\printf.c  ..\src\src\random.c  ..\src\src\resolve.c  ..\src\src\rowset.c  ..\src\src\select.c  ..\src\src\status.c  ..\src\src\table.c  ..\src\src\threads.c  ..\src\src\tclsqlite.c  ..\src\src\tokenize.c  ..\src\src\treeview.c  ..\src\src\trigger.c  ..\src\src\utf.c  ..\src\src\update.c  ..\src\src\upsert.c  ..\src\src\util.c  ..\src\src\vacuum.c  ..\src\src\vdbe.c  ..\src\src\vdbeapi.c  ..\src\src\vdbeaux.c  ..\src\src\vdbeblob.c  ..\src\src\vdbemem.c  ..\src\src\vdbesort.c  ..\src\src\vdbetrace.c  ..\src\src\vdbevtab.c  ..\src\src\vtab.c  ..\src\src\wal.c  ..\src\src\walker.c  ..\src\src\where.c  ..\src\src\wherecode.c  ..\src\src\whereexpr.c  ..\src\src\window.c ..\src\src\parse.y ..\src\src\btree.h  ..\src\src\btreeInt.h  ..\src\src\hash.h  ..\src\src\hwtime.h  ..\src\src\msvc.h  ..\src\src\mutex.h  ..\src\src\os.h  ..\src\src\os_common.h  ..\src\src\os_setup.h  ..\src\src\os_win.h ..\src\src\pager.h  ..\src\src\pcache.h  ..\src\src\pragma.h  ..\src\src\sqlite.h.in  ..\src\src\sqlite3ext.h  ..\src\src\sqliteInt.h  ..\src\src\sqliteLimit.h  ..\src\src\vdbe.h  ..\src\src\vdbeInt.h  ..\src\src\vxworks.h  ..\src\src\wal.h  ..\src\src\whereInt.h ..\src\ext\fts3\fts3.c  ..\src\ext\fts3\fts3_aux.c  ..\src\ext\fts3\fts3_expr.c  ..\src\ext\fts3\fts3_hash.c  ..\src\ext\fts3\fts3_icu.c  ..\src\ext\fts3\fts3_porter.c  ..\src\ext\fts3\fts3_snippet.c  ..\src\ext\fts3\fts3_tokenizer.c  ..\src\ext\fts3\fts3_tokenizer1.c  ..\src\ext\fts3\fts3_tokenize_vtab.c  ..\src\ext\fts3\fts3_unicode.c  ..\src\ext\fts3\fts3_unicode2.c  ..\src\ext\fts3\fts3_write.c  ..\src\ext\icu\icu.c  ..\src\ext\rtree\rtree.c  ..\src\ext\session\sqlite3session.c  ..\src\ext\rbu\sqlite3rbu.c  ..\src\ext\misc\stmt.c ..\src\ext\fts3\fts3.h  ..\src\ext\fts3\fts3Int.h  ..\src\ext\fts3\fts3_hash.h  ..\src\ext\fts3\fts3_tokenizer.h  ..\src\ext\icu\sqliteicu.h  ..\src\ext\rtree\rtree.h  ..\src\ext\rtree\geopoly.c  ..\src\ext\rbu\sqlite3rbu.h  ..\src\ext\session\sqlite3session.h opcodes.c  parse.c keywordhash.h  opcodes.h  parse.h  shell.c  sqlite3.h sqlite_tcl.h  sqlite_tclDecls.h fts5.c fts5.h tsrc
+        copy /B tsrc\fts5.c +,,
+        1 file(s) copied.
+        copy /B tsrc\fts5.h +,,
+        1 file(s) copied.
+        del /Q tsrc\sqlite.h.in tsrc\parse.y 2>NUL
+        jimsh0.exe ..\src\tool\vdbe-compress.tcl  < tsrc\vdbe.c > vdbe.new
+        move vdbe.new tsrc\vdbe.c
+        1 file(s) moved.
+        echo > .target_source
+        type tsrc\sqlite3ext.h | tclsh ..\src\tool\replace.tcl regsub "\(\*\)" "(SQLITE_CALLBACK *)"  | tclsh ..\src\tool\replace.tcl regsub "\(\*" "(SQLITE_APICALL *" > sqlite3ext.h
+        copy /Y sqlite3ext.h tsrc\sqlite3ext.h
+        1 file(s) copied.
+        copy /Y ..\src\ext\session\sqlite3session.h .
+        1 file(s) copied.
+        copy /B sqlite3session.h +,,
+        1 file(s) copied.
+        cl -nologo -W4 -DINCLUDE_MSVC_H=1  -DSTATIC_BUILD  -DSQLITE_OS_WIN=1 -I. -I..\src -I..\src\src -fp:precise /d2guard4 -D_ARM_WINAPI_PARTITION_DESKTOP_SDK_AVAILABLE -MD -DNDEBUG -DSQLITE_ENABLE_API_ARMOR=1 -D_CRT_SECURE_NO_DEPRECATE -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_DEPRECATE -D_CRT_NONSTDC_NO_WARNINGS -DSQLITE_THREADSAFE=1 -DSQLITE_THREAD_OVERRIDE_LOCK=-1  -DSQLITE_MAX_TRIGGER_DEPTH=100  -DSQLITE_ENABLE_FTS3=1 -DSQLITE_ENABLE_FTS5=1 -DSQLITE_ENABLE_RTREE=1 -DSQLITE_ENABLE_GEOPOLY=1 -DSQLITE_ENABLE_STMTVTAB=1 -DSQLITE_ENABLE_DBPAGE_VTAB=1 -DSQLITE_ENABLE_DBSTAT_VTAB=1 -DSQLITE_ENABLE_BYTECODE_VTAB=1 -DSQLITE_ENABLE_COLUMN_METADATA=1 -DSQLITE_ENABLE_SESSION=1 -DSQLITE_ENABLE_PREUPDATE_HOOK=1 -DSQLITE_ENABLE_MATH_FUNCTIONS  -DSQLITE_ENABLE_FTS4=1 -DSQLITE_SYSTEM_MALLOC=1 -DSQLITE_OMIT_LOCALTIME=1  -O2 -Zi -DSQLITE_HAVE_ZLIB=1 -I..\src\compat\zlib -DSQLITE_ENABLE_ICU=1 -I..\src\ext\icu -I..\src\compat\icu\include -Fesrc-verify.exe -wd4054 -wd4055 -wd4100 -wd4127 -wd4130 -wd4152 -wd4189 -wd4206 -wd4210 -wd4232 -wd4244 -wd4305 -wd4306 -wd4702 -wd4706 ..\src\tool\src-verify.c
+src-verify.c
+        jimsh0.exe ..\src\tool\mksqlite3c.tcl --linemacros=0 --useapicall
+        cl -nologo -W4 -DINCLUDE_MSVC_H=1  -DSTATIC_BUILD  -DSQLITE_OS_WIN=1 -I. -I..\src -I..\src\src -fp:precise /d2guard4 -D_ARM_WINAPI_PARTITION_DESKTOP_SDK_AVAILABLE -MD -DNDEBUG -DSQLITE_ENABLE_API_ARMOR=1 -D_CRT_SECURE_NO_DEPRECATE -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_DEPRECATE -D_CRT_NONSTDC_NO_WARNINGS -DSQLITE_THREADSAFE=1 -DSQLITE_THREAD_OVERRIDE_LOCK=-1  -DSQLITE_MAX_TRIGGER_DEPTH=100  -DSQLITE_ENABLE_FTS3=1 -DSQLITE_ENABLE_FTS5=1 -DSQLITE_ENABLE_RTREE=1 -DSQLITE_ENABLE_GEOPOLY=1 -DSQLITE_ENABLE_STMTVTAB=1 -DSQLITE_ENABLE_DBPAGE_VTAB=1 -DSQLITE_ENABLE_DBSTAT_VTAB=1 -DSQLITE_ENABLE_BYTECODE_VTAB=1 -DSQLITE_ENABLE_COLUMN_METADATA=1 -DSQLITE_ENABLE_SESSION=1 -DSQLITE_ENABLE_PREUPDATE_HOOK=1 -DSQLITE_ENABLE_MATH_FUNCTIONS  -DSQLITE_ENABLE_FTS4=1 -DSQLITE_SYSTEM_MALLOC=1 -DSQLITE_OMIT_LOCALTIME=1  -O2 -Zi -DSQLITE_HAVE_ZLIB=1 -I..\src\compat\zlib -DSQLITE_ENABLE_ICU=1 -I..\src\ext\icu -I..\src\compat\icu\include -Fosqlite3.lo -Fdsqlite3.pdb  -DSQLITE_API=__declspec(dllexport) -c sqlite3.c
+sqlite3.c
+sqlite3.c(219078): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+sqlite3.c(219134): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+        echo #ifndef SQLITE_RESOURCE_VERSION > sqlite3rc.h
+        for /F %V in ('type "..\src\VERSION"') do (  echo #define SQLITE_RESOURCE_VERSION %V  | jimsh0.exe ..\src\tool\replace.tcl exact . ^, >> sqlite3rc.h  )
+
+..\build>(echo #define SQLITE_RESOURCE_VERSION 3.49.1   | jimsh0.exe ..\src\tool\replace.tcl exact . ,   1>>sqlite3rc.h )
+        echo #endif >> sqlite3rc.h
+        rc -DSQLITE_OS_WIN=1 -I. -I..\src -I..\src\src   -DNDEBUG -DSQLITE_ENABLE_API_ARMOR=1 -D_CRT_SECURE_NO_DEPRECATE -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_DEPRECATE -D_CRT_NONSTDC_NO_WARNINGS -DSQLITE_THREADSAFE=1 -DSQLITE_THREAD_OVERRIDE_LOCK=-1  -DSQLITE_MAX_TRIGGER_DEPTH=100  -DSQLITE_ENABLE_FTS3=1 -DSQLITE_ENABLE_FTS5=1 -DSQLITE_ENABLE_RTREE=1 -DSQLITE_ENABLE_GEOPOLY=1 -DSQLITE_ENABLE_STMTVTAB=1 -DSQLITE_ENABLE_DBPAGE_VTAB=1 -DSQLITE_ENABLE_DBSTAT_VTAB=1 -DSQLITE_ENABLE_BYTECODE_VTAB=1 -DSQLITE_ENABLE_COLUMN_METADATA=1 -DSQLITE_ENABLE_SESSION=1 -DSQLITE_ENABLE_PREUPDATE_HOOK=1 -DSQLITE_ENABLE_MATH_FUNCTIONS  -DSQLITE_ENABLE_FTS4=1 -DSQLITE_SYSTEM_MALLOC=1 -DSQLITE_OMIT_LOCALTIME=1  -DSQLITE_HAVE_ZLIB=1 -I..\src\compat\zlib -DSQLITE_ENABLE_ICU=1 -I..\src\ext\icu -I..\src\compat\icu\include -r -fo sqlite3res.lo ..\src\src\sqlite3.rc
+Microsoft (R) Windows (R) Resource Compiler Version 10.0.10011.16384
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+        link.exe /DEBUG  /NOLOGO /MACHINE:x64 /DYNAMICBASE /NODEFAULTLIB:kernel32.lib mincore.lib /guard:cf "/LIBPATH:C:\Program Files (x86)\Windows Kits\10\lib\10.0.20348.0\ucrt\x64" /NODEFAULTLIB:libucrt.lib /DEFAULTLIB:ucrt.lib  /LIBPATH:..\src\compat\zlib /LIBPATH:..\src\compat\icu\lib /DLL  /OUT:winsqlite3.dll sqlite3.lo sqlite3res.lo  zlib.lib icuuc.lib icuin.lib
+   Creating library winsqlite3.lib and object winsqlite3.exp
+        lib.exe /NOLOGO /MACHINE:x64 /OUT:libsqlite3.lib sqlite3.lo
+        pushd ..\src\compat\zlib && nmake.exe /f win32\Makefile.msc clean zlib.lib && popd
+
+Microsoft (R) Program Maintenance Utility Version 14.43.34808.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+        del zlib.lib
+        del zlib1.dll
+Could Not Find ..\src\compat\zlib\zlib1.dll
+        del zdll.lib
+Could Not Find ..\src\compat\zlib\zdll.lib
+        del *.obj
+        del *.res
+Could Not Find ..\src\compat\zlib\*.res
+        del *.exp
+Could Not Find ..\src\compat\zlib\*.exp
+        del *.exe
+Could Not Find ..\src\compat\zlib\*.exe
+        del *.pdb
+        del *.manifest
+Could Not Find ..\src\compat\zlib\*.manifest
+        del foo.gz
+Could Not Find ..\src\compat\zlib\foo.gz
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\adler32.c
+adler32.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\compress.c
+compress.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\crc32.c
+crc32.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\deflate.c
+deflate.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\gzclose.c
+gzclose.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\gzlib.c
+gzlib.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\gzread.c
+gzread.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\gzwrite.c
+gzwrite.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\infback.c
+infback.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\inflate.c
+inflate.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\inftrees.c
+inftrees.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\inffast.c
+inffast.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\trees.c
+trees.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\uncompr.c
+uncompr.c
+        cl -c -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib"  .\zutil.c
+zutil.c
+        lib -nologo -out:zlib.lib adler32.obj compress.obj crc32.obj deflate.obj gzclose.obj gzlib.obj gzread.obj  gzwrite.obj infback.obj inflate.obj inftrees.obj inffast.obj trees.obj uncompr.obj zutil.obj
+        cl -nologo -W4 -DINCLUDE_MSVC_H=1  -DSTATIC_BUILD  -DSQLITE_OS_WIN=1 -I. -I..\src -I..\src\src -fp:precise /d2guard4 -D_ARM_WINAPI_PARTITION_DESKTOP_SDK_AVAILABLE -MD -DNDEBUG -DSQLITE_ENABLE_API_ARMOR=1 -D_CRT_SECURE_NO_DEPRECATE -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_DEPRECATE -D_CRT_NONSTDC_NO_WARNINGS -DSQLITE_THREADSAFE=1 -DSQLITE_THREAD_OVERRIDE_LOCK=-1  -DSQLITE_MAX_TRIGGER_DEPTH=100  -DSQLITE_ENABLE_FTS3=1 -DSQLITE_ENABLE_FTS5=1 -DSQLITE_ENABLE_RTREE=1 -DSQLITE_ENABLE_GEOPOLY=1 -DSQLITE_ENABLE_STMTVTAB=1 -DSQLITE_ENABLE_DBPAGE_VTAB=1 -DSQLITE_ENABLE_DBSTAT_VTAB=1 -DSQLITE_ENABLE_BYTECODE_VTAB=1 -DSQLITE_ENABLE_COLUMN_METADATA=1 -DSQLITE_ENABLE_SESSION=1 -DSQLITE_ENABLE_PREUPDATE_HOOK=1 -DSQLITE_ENABLE_MATH_FUNCTIONS  -DSQLITE_ENABLE_FTS4=1 -DSQLITE_SYSTEM_MALLOC=1 -DSQLITE_OMIT_LOCALTIME=1  -O2 -Zi -DSQLITE_HAVE_ZLIB=1 -I..\src\compat\zlib -DSQLITE_ENABLE_ICU=1 -I..\src\ext\icu -I..\src\compat\icu\include -Fewinsqlite3shell.exe  -DSQLITE_API=__declspec(dllimport) -DHAVE_READLINE=0 shell.c   /link  /DEBUG  /NOLOGO /MACHINE:x64 /DYNAMICBASE /NODEFAULTLIB:kernel32.lib mincore.lib /guard:cf "/LIBPATH:C:\Program Files (x86)\Windows Kits\10\lib\10.0.20348.0\ucrt\x64" /NODEFAULTLIB:libucrt.lib /DEFAULTLIB:ucrt.lib winsqlite3.lib  /LIBPATH:..\src\compat\zlib /LIBPATH:..\src\compat\icu\lib sqlite3res.lo   zlib.lib icuuc.lib icuin.lib
+shell.c
+..\build\shell.c(11054) : warning C4701: potentially uninitialized local variable 'lfh' used
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+
+
+
+
+
+
+
