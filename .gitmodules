@@ -1,4 +1,4 @@
 [submodule "sqlite"]
 	path = src
-	url = https://github.com/qlua-project/sqlite
+	url = git@github.com:qlua-project/sqlite.git
 	branch = version-3.49.1
