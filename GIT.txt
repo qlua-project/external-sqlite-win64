@@ -1,0 +1,31 @@
+$ git remote -v
+origin  git@github.com:qlua-project/sqlite.git (fetch)
+origin  git@github.com:qlua-project/sqlite.git (push)
+upstream        https://github.com/sqlite/sqlite.git (fetch)
+upstream        https://github.com/sqlite/sqlite.git (push)
+
+$ git fetch upstream
+remote: Enumerating objects: 48983, done.
+remote: Counting objects: 100% (31436/31436), done.
+remote: Compressing objects: 100% (722/722), done.
+remote: Total 48983 (delta 31071), reused 30720 (delta 30713), pack-reused 17547 (from 6)
+Receiving objects: 100% (48983/48983), 263.35 MiB | 4.61 MiB/s, done.
+Resolving deltas: 100% (36950/36950), completed with 6258 local objects.
+From https://github.com/sqlite/sqlite
+
+... [new branch] ... -> upstream/...
+... [new tag]    ... -> ...
+
+error: You're on a case-insensitive filesystem, and the remote you are
+trying to fetch from has references that only differ in casing. It
+is impossible to store such references with the 'files' backend. You
+can either accept this as-is, in which case you won't be able to
+store all remote references on disk. Or you can alternatively
+migrate your repository to use the 'reftable' backend with the
+following command:
+
+    git refs migrate --ref-format=reftable
+
+Please keep in mind that not all implementations of Git support this
+new format yet. So if you use tools other than Git to access this
+repository it may not be an option to migrate to reftables.
